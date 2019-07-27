@@ -93,16 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="Java、C++">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kawaii-jump 的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]实现int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 示例 1:  输入: 4输出: 2  示例 2:  输入: 8输出: 2说明: 8 的平方根是 2.82842…,     由于返回类型是整">
+<meta name="keywords" content="二分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二分">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/二分-一/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="Java、C++">
+<meta property="og:description" content="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]实现int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 示例 1:  输入: 4输出: 2  示例 2:  输入: 8输出: 2说明: 8 的平方根是 2.82842…,     由于返回类型是整">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-27T04:24:58.350Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kawaii-jump 的博客">
-<meta name="twitter:description" content="Java、C++">
+<meta name="twitter:title" content="二分">
+<meta name="twitter:description" content="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]实现int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 示例 1:  输入: 4输出: 2  示例 2:  输入: 8输出: 2说明: 8 的平方根是 2.82842…,     由于返回类型是整">
 
 
 
@@ -110,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/27/二分-一/">
 
 
 
@@ -121,7 +123,7 @@
 </script>
 
   
-  <title>Kawaii-jump 的博客</title>
+  <title>二分 | Kawaii-jump 的博客</title>
   
 
 
@@ -169,8 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,7 +213,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -316,9 +317,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -350,10 +351,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/27/二分-一/" class="post-title-link" itemprop="url">二分</a>
+          <h1 class="post-title" itemprop="name headline">二分
+
               
             
           </h1>
@@ -444,9 +443,7 @@
       
 
       
-        
-          
-            <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx" class="headerlink" title="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]"></a>题目描述 [原题链接][<a href="https://leetcode-cn.com/problems/sqrtx/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sqrtx/]</a></h4><p>实现<code>int sqrt(int x)</code> 函数。</p>
+        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx" class="headerlink" title="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]"></a>题目描述 [原题链接][<a href="https://leetcode-cn.com/problems/sqrtx/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sqrtx/]</a></h4><p>实现<code>int sqrt(int x)</code> 函数。</p>
 <p>计算并返回 x 的平方根，其中 x 是非负整数。</p>
 <p>由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
 <p>示例 1:</p>
@@ -465,13 +462,13 @@
 <h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = x;</span><br><span class="line">        <span class="keyword">if</span>(r==<span class="number">1</span>||r==<span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> s = x/mid;</span><br><span class="line">            <span class="keyword">int</span> ss = x/(mid+<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span>(mid==s)<span class="keyword">return</span> s;</span><br><span class="line">            <span class="keyword">if</span>(s&gt;mid&amp;&amp;ss&lt;mid+<span class="number">1</span>)<span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(s&gt;mid)l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(s&lt;mid)r=mid-<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
 
     
 
+    
+      
     
 
     
@@ -489,328 +486,39 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/21/测试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kawaii-jump">
-      <meta itemprop="description" content="Java、C++">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kawaii-jump 的博客">
-    </span>
-
-    
-      <header class="post-header">
-
         
+          
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/21/测试/" class="post-title-link" itemprop="url">测试</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
+        <div class="post-tags">
           
+            <a href="/tags/二分/" rel="tag"># 二分</a>
           
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-21 12:58:44 / 修改时间：13:42:08" itemprop="dateCreated datePublished" datetime="2019-07-21T12:58:44+08:00">2019-07-21</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="我是测试"><a href="#我是测试" class="headerlink" title="我是测试"></a>我是测试</h1><p>​        今天开始我就可以开始写代码了！！</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/21/测试/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/21/测试/" rel="next" title="测试">
+                <i class="fa fa-chevron-left"></i> 测试
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kawaii-jump">
-      <meta itemprop="description" content="Java、C++">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kawaii-jump 的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/20/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
+          <span class="post-nav-divider"></span>
 
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-20 10:27:42" itemprop="dateCreated datePublished" datetime="2019-07-20T10:27:42+08:00">2019-07-20</time>
-            </span>
-          
-
-          
-
-          
-
-          
+          <div class="post-nav-prev post-nav-item">
             
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -820,14 +528,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -847,8 +556,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -930,6 +648,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx"><span class="nav-number">1.</span> <span class="nav-text">题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1054,6 +789,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1067,6 +806,8 @@
 
   
 
+
+  
 
 
   
