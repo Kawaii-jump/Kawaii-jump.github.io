@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="题目描述[原题链接][https://leetcode-cn.com/problems/search-insert-position/]给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。 你可以假设数组中无重复元素。">
+  <meta name="description" content="题目描述[原题链接][https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。 你的算法时间复杂度必须是 O(log n) 级别。 如果数组中不存在目标值，返回">
 <meta name="keywords" content="二分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Binary">
-<meta property="og:url" content="http://yoursite.com/2019/07/28/Binary/index.html">
+<meta property="og:title" content="Binary2">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/Binary2/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/search-insert-position/]给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。 你可以假设数组中无重复元素。">
+<meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。 你的算法时间复杂度必须是 O(log n) 级别。 如果数组中不存在目标值，返回">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-28T05:33:29.714Z">
+<meta property="og:updated_time" content="2019-07-29T07:19:17.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Binary">
-<meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/search-insert-position/]给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。 你可以假设数组中无重复元素。">
+<meta name="twitter:title" content="Binary2">
+<meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。 你的算法时间复杂度必须是 O(log n) 级别。 如果数组中不存在目标值，返回">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/28/Binary/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/29/Binary2/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>Binary | Kawaii-jump 的博客</title>
+  <title>Binary2 | Kawaii-jump 的博客</title>
   
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/28/Binary/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/Binary2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kawaii-jump">
@@ -351,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Binary
+          <h1 class="post-title" itemprop="name headline">Binary2
 
               
             
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-07-28 12:49:10 / 修改时间：13:33:29" itemprop="dateCreated datePublished" datetime="2019-07-28T12:49:10+08:00">2019-07-28</time>
+              <time title="创建时间：2019-07-29 14:55:19 / 修改时间：15:19:17" itemprop="dateCreated datePublished" datetime="2019-07-29T14:55:19+08:00">2019-07-29</time>
             </span>
           
 
@@ -443,30 +443,22 @@
       
 
       
-        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-search-insert-position"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-search-insert-position" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/search-insert-position/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/search-insert-position/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-insert-position/]</a></h4><p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-<p>你可以假设数组中无重复元素。</p>
-<a id="more"></a>
-
+        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-find-first-and-last-position-of-element-in-sorted-array"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-find-first-and-last-position-of-element-in-sorted-array" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]</a></h4><p>给定一个按照升序排列的整数数组 <code>nums</code>，和一个目标值 <code>target</code>。找出给定目标值在数组中的开始位置和结束位置。</p>
+<p>你的算法时间复杂度必须是 <em>O(log n)</em> 级别。</p>
+<p>如果数组中不存在目标值，返回 <code>[-1, -1]</code>。</p>
 <p>示例 1:</p>
 <blockquote>
-<p>输入: [1,3,5,6], 5<br>输出: 2</p>
+<p>输入: nums = [5,7,7,8,8,10], target = 8<br>输出: [3,4]</p>
 </blockquote>
 <p>示例 2:</p>
 <blockquote>
-<p>输入: [1,3,5,6], 2<br>输出: 1</p>
+<p>输入: nums = [5,7,7,8,8,10], target = 6<br>输出: [-1,-1]</p>
 </blockquote>
-<p>示例 3:</p>
-<blockquote>
-<p>输入: [1,3,5,6], 7<br>输出: 4</p>
-</blockquote>
-<p>示例 4:</p>
-<blockquote>
-<p>输入: [1,3,5,6], 0<br>输出: 0</p>
-</blockquote>
-<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>​        给定的是一个有序的数组，在数组中找到目标值返回的是索引，如果不存在就插入数据，返回插入位置，不存在重复元素。读完题目可以明确知道是一个搜索题，本专题是二分，就采用<strong>二分法</strong>去做，首先明确的是二分复杂度<strong><em>O(logn)</em></strong>，基本的思路就是二分查找，慢慢缩小区间，当<strong><em>R&lt;=L</em></strong>时，当前的值不是要找的目标值，目标值插入的位置就是<strong><em>L</em></strong>，如果存在目标值，当索引为<strong><em>mid</em></strong>时的值等于目标值，返回索引 <strong><em>mid</em></strong>即可；在查找前可以进行判断，要找的值要是大于数组的<strong><em>最大值</em></strong>或者小于数组中的<strong><em>最小值</em></strong>，直接可以返回索引<strong>数组的长度</strong>或<strong>0</strong>。</p>
-<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.size()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">if</span>(target&gt;nums[r])<span class="keyword">return</span> r+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target==nums[mid])<span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(target&gt;nums[mid])l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;nums[mid])r=mid<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> l;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>​        该题明确要求复杂度为<em>O(log n)</em>级别，最容易想到的就是<strong>二分法</strong>，而且给我们的还是升序排列的数组，符合二分的要求，（QAQ）要求找出目标值在数组中的起始位置。</p>
+<p>​        我的解题思路是这样的，先找到左端的目标值，再从右端找到目标值，两个目标值都找到了，将他们加到向量中，返回向量即可，没有目标值返回<code>{-1,-1}</code>;</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; searchRange(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v1;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r=nums.size()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[r]==target||nums[l]==target)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[r]==target)&#123;</span><br><span class="line">                    <span class="keyword">while</span>(nums[l]!=target)l++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">while</span>(nums[r]!=target)r--;</span><br><span class="line">                &#125;</span><br><span class="line">                v1.push_back(l);</span><br><span class="line">                v1.push_back(r);</span><br><span class="line">                <span class="keyword">return</span> v1;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                r--;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="number">-1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t&gt;nums[nums.length-<span class="number">1</span>])<span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="keyword">if</span>(t&lt;nums[<span class="number">0</span>])<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r=nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(t==nums[mid])<span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;t)r=mid-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&lt;t)l=mid+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> l;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] searchRange(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r=nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[l]==target||nums[r]==target)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[l]==target)&#123;</span><br><span class="line">                    <span class="keyword">while</span>(nums[r]!=target)&#123;</span><br><span class="line">                        r--;    </span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">while</span>(nums[l]!=target)&#123;</span><br><span class="line">                        l++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">int</span>[] t = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">                t[<span class="number">0</span>]=l;t[<span class="number">1</span>]=r;</span><br><span class="line">                <span class="keyword">return</span> t;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                r--;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] t = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        t[<span class="number">0</span>]=-<span class="number">1</span>;t[<span class="number">1</span>]=-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -511,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/27/二分-一/" rel="next" title="二分">
-                <i class="fa fa-chevron-left"></i> 二分
+              <a href="/2019/07/28/Binary/" rel="next" title="Binary">
+                <i class="fa fa-chevron-left"></i> Binary
               </a>
             
           </div>
@@ -520,10 +512,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/29/Binary2/" rel="prev" title="Binary2">
-                Binary2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -670,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-search-insert-position"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://leetcode-cn.com/problems/search-insert-position/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-find-first-and-last-position-of-element-in-sorted-array"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
             
 
           </div>
