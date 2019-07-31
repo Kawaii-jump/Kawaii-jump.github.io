@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]实现int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。">
+  <meta name="description" content="题目描述[原题连接][https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。 请找出其中最小的元素。 你可以假设数组中不存在重复元素。">
 <meta name="keywords" content="二分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分">
-<meta property="og:url" content="http://yoursite.com/2019/07/27/二分-一/index.html">
+<meta property="og:title" content="Binary4">
+<meta property="og:url" content="http://yoursite.com/2019/07/31/Binary4/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]实现int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。">
+<meta property="og:description" content="题目描述[原题连接][https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。 请找出其中最小的元素。 你可以假设数组中不存在重复元素。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-27T04:43:25.211Z">
+<meta property="og:updated_time" content="2019-07-31T09:53:08.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二分">
-<meta name="twitter:description" content="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]实现int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。">
+<meta name="twitter:title" content="Binary4">
+<meta name="twitter:description" content="题目描述[原题连接][https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]假设按照升序排序的数组在预先未知的某个点上进行了旋转。 ( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。 请找出其中最小的元素。 你可以假设数组中不存在重复元素。">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/27/二分-一/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/31/Binary4/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>二分 | Kawaii-jump 的博客</title>
+  <title>Binary4 | Kawaii-jump 的博客</title>
   
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/二分-一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/Binary4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kawaii-jump">
@@ -351,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二分
+          <h1 class="post-title" itemprop="name headline">Binary4
 
               
             
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-07-27 11:35:12 / 修改时间：12:43:25" itemprop="dateCreated datePublished" datetime="2019-07-27T11:35:12+08:00">2019-07-27</time>
+              <time title="创建时间：2019-07-31 17:26:50 / 修改时间：17:53:08" itemprop="dateCreated datePublished" datetime="2019-07-31T17:26:50+08:00">2019-07-31</time>
             </span>
           
 
@@ -443,26 +443,27 @@
       
 
       
-        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx" class="headerlink" title="题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]"></a>题目描述 [原题链接][<a href="https://leetcode-cn.com/problems/sqrtx/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sqrtx/]</a></h4><p>实现<code>int sqrt(int x)</code> 函数。</p>
-<p>计算并返回 x 的平方根，其中 x 是非负整数。</p>
-<p>由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
+        <h4 id="题目描述-原题连接-https-leetcode-cn-com-problems-find-minimum-in-rotated-sorted-array"><a href="#题目描述-原题连接-https-leetcode-cn-com-problems-find-minimum-in-rotated-sorted-array" class="headerlink" title="题目描述[原题连接][https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]"></a>题目描述[原题连接][<a href="https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]</a></h4><p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。</p>
+<p>( 例如，数组 <code>[0,1,2,4,5,6,7]</code> 可能变为 <code>[4,5,6,7,0,1,2]</code> )。</p>
+<p>请找出其中最小的元素。</p>
+<p>你可以假设数组中不存在重复元素。</p>
 <a id="more"></a>
 
 <p>示例 1:</p>
 <blockquote>
-<p>输入: 4<br>输出: 2</p>
+<p>输入: [3,4,5,1,2]<br>输出: 1</p>
 </blockquote>
 <p>示例 2:</p>
 <blockquote>
-<p>输入: 8<br>输出: 2<br>说明: 8 的平方根是 2.82842…,<br>     由于返回类型是整数，小数部分将被舍去。</p>
+<p>输入: [4,5,6,7,0,1,2]<br>输出: 0</p>
 </blockquote>
-<h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p><strong>(二分)</strong> <em>O(logx)</em><br>二分出最大的 <strong>y</strong>，满足<strong>y^2&lt;=x</strong>,</p>
-<p>则 <strong>y</strong>就是答案。</p>
-<p>​         输入x，设置左边界为<strong>0</strong>，右边界为<strong>x</strong>，计算出<strong><em>mid</em></strong> ，<code>int mid = l + (r-l)/2</code>，用两个变量分别存储<code>x/mid</code>，<code>x/(mid+1)</code>的值，通过与这两个值比较更新左右区间边界，当<code>s&gt;mid&amp;&amp;ss&lt;mid+1</code>时说明此时的<strong><em>mid</em></strong>就是我们要找的数，<code>s&gt;mid</code>更新左区间，<code>s&lt;mid</code>更新右区间，相等的时候该<strong>s</strong>就是要找的目标值。按照这个流程实现就可以解决问题了。</p>
-<p>时间复杂度分析：二分的时间复杂度是 <strong>O(logx)</strong>。</p>
-<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = x;</span><br><span class="line">        <span class="keyword">if</span>(r==<span class="number">1</span>||r==<span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l + (r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> s = x/mid;</span><br><span class="line">            <span class="keyword">int</span> ss = x/(mid+<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span>(x/s==s)<span class="keyword">return</span> s;</span><br><span class="line">            <span class="keyword">if</span>(s&gt;mid&amp;&amp;ss&lt;mid+<span class="number">1</span>)<span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(s&gt;mid)l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(s&lt;mid)r = mid<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>​        给定的数组是升序数组旋转得到的，假设最小值的下标为<code>mid</code>,该数组满足<code>mid</code>前的都大于<code>nums[mid]</code>，并且是升序排列，<code>mid</code>后面的元素也是都大于<code>nums[mid]</code>，并且升序排列，所以<strong>二分法</strong>可以找到我们要找的目标值。</p>
+<p>​        二分法的时间复杂度：<strong><em>O(logn)</em></strong></p>
+<h4 id="C-解法一"><a href="#C-解法一" class="headerlink" title="C++解法一"></a>C++解法一</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; v)</span> </span>&#123;</span><br><span class="line">        sort(v.begin(),v.end());</span><br><span class="line">        <span class="keyword">return</span> v[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mySqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = x;</span><br><span class="line">        <span class="keyword">if</span>(r==<span class="number">1</span>||r==<span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> s = x/mid;</span><br><span class="line">            <span class="keyword">int</span> ss = x/(mid+<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span>(mid==s)<span class="keyword">return</span> s;</span><br><span class="line">            <span class="keyword">if</span>(s&gt;mid&amp;&amp;ss&lt;mid+<span class="number">1</span>)<span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(s&gt;mid)l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(s&lt;mid)r=mid-<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-解法二"><a href="#C-解法二" class="headerlink" title="C++解法二"></a>C++解法二</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; v)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r=v.size()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(v[mid]&gt;v[r])l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(v[mid]&lt;v[r])r=mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> v[r];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[nums.length-<span class="number">1</span>]&gt;nums[<span class="number">0</span>])<span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;=nums[<span class="number">0</span>])l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> r=mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[r];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -507,8 +508,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/21/测试/" rel="next" title="测试">
-                <i class="fa fa-chevron-left"></i> 测试
+              <a href="/2019/07/30/Binary3/" rel="next" title="Binary3">
+                <i class="fa fa-chevron-left"></i> Binary3
               </a>
             
           </div>
@@ -516,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/28/Binary/" rel="prev" title="Binary">
-                Binary <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -666,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-sqrtx"><span class="nav-number">1.</span> <span class="nav-text">题目描述 [原题链接][https://leetcode-cn.com/problems/sqrtx/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题连接-https-leetcode-cn-com-problems-find-minimum-in-rotated-sorted-array"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题连接][https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-解法一"><span class="nav-number">3.</span> <span class="nav-text">C++解法一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-解法二"><span class="nav-number">4.</span> <span class="nav-text">C++解法二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">5.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
             
 
           </div>
