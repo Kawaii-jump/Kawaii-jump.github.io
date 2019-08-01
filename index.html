@@ -333,6 +333,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/Binary5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kawaii-jump">
+      <meta itemprop="description" content="Java、C++">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kawaii-jump 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/01/Binary5/" class="post-title-link" itemprop="url">Binary5</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-01 20:05:09 / 修改时间：20:31:24" itemprop="dateCreated datePublished" datetime="2019-08-01T20:05:09+08:00">2019-08-01</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeedCode/" itemprop="url" rel="index"><span itemprop="name">LeedCode</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeedCode/ACM/" itemprop="url" rel="index"><span itemprop="name">ACM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-search-in-rotated-sorted-array-submissions"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-search-in-rotated-sorted-array-submissions" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/search-in-rotated-sorted-array/submissions/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/submissions/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-in-rotated-sorted-array/submissions/]</a></h4><p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。</p>
+<p>( 例如，数组 <code>[0,1,2,4,5,6,7]</code> 可能变为 <code>[4,5,6,7,0,1,2]</code> )。</p>
+<p>搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 <code>-1</code> 。</p>
+<p>你可以假设数组中不存在重复的元素。</p>
+<p>你的算法时间复杂度必须是 <em>O(log n)</em> 级别。</p>
+<p>示例 1:</p>
+<blockquote>
+<p>输入: nums = [4,5,6,7,0,1,2], target = 0<br>输出: 4</p>
+</blockquote>
+<p>示例 2:</p>
+<blockquote>
+<p>输入: nums = [4,5,6,7,0,1,2], target = 3<br>输出: -1</p>
+</blockquote>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>​        需要在未知点旋转的数组寻找到目标值，由于数组<code>nums</code>并不一定是单调的所以直接套用<strong>二分法</strong>的模板肯定是不可行的，之前我们写过通过二分找到旋转数组的最小值；由此可以想到第一种解题方法：</p>
+<pre><code>- 首先判断数组长度，为空，返回`-1`；
+
+- 通过一遍二分找到分界点</code></pre><ul>
+<li><p>判断目标值可能在哪边，二分搜索，找到了返回<code>mid</code>，没找到返回<code>-1</code></p>
+<p>​    第二种解法：通过比较nums[mid]和nums[0]的大小，实现边界判断，让区间缩小，直到跳出循环即可</p>
+</li>
+</ul>
+<h4 id="C-解法一"><a href="#C-解法一" class="headerlink" title="C++解法一"></a>C++解法一</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; v, <span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>,r = v.size()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">if</span>(v.empty())<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(v[mid]&gt;v[r])l=mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(v[mid]&lt;v[r])r=mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(r==<span class="number">0</span>)&#123;</span><br><span class="line">            l=<span class="number">0</span>;</span><br><span class="line">            r=v.size()<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">                <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]==t)<span class="keyword">return</span> mid;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]&gt;t)r=mid<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]&lt;t)l=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(t==v[<span class="number">0</span>])<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(t&lt;v[<span class="number">0</span>])&#123;</span><br><span class="line">            l=r;</span><br><span class="line">            r=v.size()<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">                <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]==t)<span class="keyword">return</span> mid;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]&gt;t)r=mid<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]&lt;t)l=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            l=<span class="number">0</span>;</span><br><span class="line">            r=r<span class="number">-1</span>;</span><br><span class="line">             <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">                <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]==t)<span class="keyword">return</span> mid;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]&gt;t)r=mid<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">if</span>(v[mid]&lt;t)l=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="C-解法二"><a href="#C-解法二" class="headerlink" title="C++解法二"></a>C++解法二</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.size()==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.size()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;=nums[<span class="number">0</span>])&#123;</span><br><span class="line">                <span class="keyword">if</span>(target&gt;nums[mid])l=mid+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;nums[<span class="number">0</span>])l=mid+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;=nums[mid]&amp;&amp;target&gt;=nums[<span class="number">0</span>])r=mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(target&gt;=nums[<span class="number">0</span>])r=mid;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;=nums[mid])r=mid;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;nums[<span class="number">0</span>]&amp;&amp;target&gt;nums[mid])l=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[l]==target?l:<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">0</span>)<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&gt;=nums[<span class="number">0</span>])&#123;</span><br><span class="line">                <span class="keyword">if</span>(target&gt;nums[mid])l=mid+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;nums[<span class="number">0</span>])l=mid+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;=nums[mid]&amp;&amp;target&gt;=nums[<span class="number">0</span>])r=mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(target&gt;=nums[<span class="number">0</span>])r=mid;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;=nums[mid])r=mid;</span><br><span class="line">                <span class="keyword">if</span>(target&lt;nums[<span class="number">0</span>]&amp;&amp;target&gt;nums[mid])l=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[l]==target?l:-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/Binary4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1574,7 +1772,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
