@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="题目描述[原题连接][https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性： ​    *每行中的整数从左到右按升序排列。​    *每行的第一个整数大于前一行的最后一个整数。">
+  <meta name="description" content="题目描述[原题链接][https://leetcode-cn.com/problems/find-the-duplicate-number/]给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。 示例 1:  输入: [1,3,4,2,2]输出: 2  示例 2:  输入: [3,1">
 <meta name="keywords" content="二分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Binary3">
-<meta property="og:url" content="http://yoursite.com/2019/07/30/Binary3/index.html">
+<meta property="og:title" content="Binary9">
+<meta property="og:url" content="http://yoursite.com/2019/08/03/Binary9/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="题目描述[原题连接][https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性： ​    *每行中的整数从左到右按升序排列。​    *每行的第一个整数大于前一行的最后一个整数。">
+<meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/find-the-duplicate-number/]给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。 示例 1:  输入: [1,3,4,2,2]输出: 2  示例 2:  输入: [3,1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T12:21:23.912Z">
+<meta property="og:updated_time" content="2019-08-03T11:20:37.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Binary3">
-<meta name="twitter:description" content="题目描述[原题连接][https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性： ​    *每行中的整数从左到右按升序排列。​    *每行的第一个整数大于前一行的最后一个整数。">
+<meta name="twitter:title" content="Binary9">
+<meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/find-the-duplicate-number/]给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。 示例 1:  输入: [1,3,4,2,2]输出: 2  示例 2:  输入: [3,1">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/30/Binary3/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/03/Binary9/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>Binary3 | Kawaii-jump 的博客</title>
+  <title>Binary9 | Kawaii-jump 的博客</title>
   
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/Binary3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/03/Binary9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kawaii-jump">
@@ -351,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Binary3
+          <h1 class="post-title" itemprop="name headline">Binary9
 
               
             
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-07-30 19:34:50 / 修改时间：20:21:23" itemprop="dateCreated datePublished" datetime="2019-07-30T19:34:50+08:00">2019-07-30</time>
+              <time title="创建时间：2019-08-03 19:06:44 / 修改时间：19:20:37" itemprop="dateCreated datePublished" datetime="2019-08-03T19:06:44+08:00">2019-08-03</time>
             </span>
           
 
@@ -443,23 +443,21 @@
       
 
       
-        <h4 id="题目描述-原题连接-https-leetcode-cn-com-problems-search-a-2d-matrix-submissions"><a href="#题目描述-原题连接-https-leetcode-cn-com-problems-search-a-2d-matrix-submissions" class="headerlink" title="题目描述[原题连接][https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]"></a>题目描述[原题连接][<a href="https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]</a></h4><p>编写一个高效的算法来判断 <em>m x n</em> 矩阵中，是否存在一个目标值。该矩阵具有如下特性：</p>
-<p>​    *每行中的整数从左到右按升序排列。<br>​    *每行的第一个整数大于前一行的最后一个整数。</p>
-<a id="more"></a>
-
+        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-find-the-duplicate-number"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-find-the-duplicate-number" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/find-the-duplicate-number/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/find-the-duplicate-number/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-the-duplicate-number/]</a></h4><p>给定一个包含 <em>n</em> + 1 个整数的数组 <em>nums</em>，其数字都在 1 到 <em>n</em>之间（包括 1 和 <em>n</em>），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。</p>
 <p>示例 1:</p>
 <blockquote>
-<p>输入:<br>matrix = [<br>  [1,   3,  5,  7],<br>  [10, 11, 16, 20],<br>  [23, 30, 34, 50]<br>]<br>target = 3<br>输出: true</p>
+<p>输入: [1,3,4,2,2]<br>输出: 2</p>
 </blockquote>
 <p>示例 2:</p>
 <blockquote>
-<p>输入:<br>matrix = [<br>  [1,   3,  5,  7],<br>  [10, 11, 16, 20],<br>  [23, 30, 34, 50]<br>]<br>target = 13<br>输出: false</p>
+<p>输入: [3,1,3,4,2]<br>输出: 3</p>
 </blockquote>
-<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>​        题意很明确，目的是为了让你在矩阵<code>matrix</code>中找目标值<code>target</code>找到了返回<code>true</code>否则返回<code>false</code>，初次读题，想到的是暴力，先找到属于哪一行再搜索，没找到返回<code>false</code>，找到了返回<code>true</code>;回过头想想，把二维的矩阵拉直，就相当于一维数组，而且刚好是升序排列，采用<strong><em>二分法</em></strong>合情合理。</p>
-<p>​        二分时间复杂度<strong><em>O(log n)</em></strong></p>
-<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; ma, <span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(ma.empty()||ma[<span class="number">0</span>].empty())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">int</span> m = ma.size();</span><br><span class="line">        <span class="keyword">int</span> n = ma[<span class="number">0</span>].size();</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = m*n<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(ma[mid/n][mid%n]==t)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(ma[mid/n][mid%n]&gt;t)r=mid<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">if</span>(ma[mid/n][mid%n]&lt;t)l=mid+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<p>不能更改原数组（假设数组是只读的）。<br>只能使用额外的 <strong><em>O(1)</em></strong> 的空间。<br>时间复杂度小于 <strong><em>O(n^2)</em></strong> 。<br>数组中只有一个重复的数字，但它可能不止重复出现一次。</p>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>​        使用的算法是：<em>弗洛伊德的乌龟和兔子（循环检测）</em>,首先，我们可以很容易地证明问题的约束意味着必须存在一个循环。因为 <code>nums</code> 中的每个数字都在 1 和 n 之间，所以它必须指向存在的索引。此外，由于 0不能作为 <code>nums</code> 中的值出现，<code>nums[0]</code> 不能作为循环的一部分。</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findDuplicate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tortoise = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> here = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            tortoise = nums[tortoise];</span><br><span class="line">            here = nums[nums[here]];</span><br><span class="line">        &#125;<span class="keyword">while</span>(tortoise!=here);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> ptr1=nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> ptr2=tortoise;</span><br><span class="line">        <span class="keyword">while</span>(ptr1!=ptr2)&#123;</span><br><span class="line">            ptr1=nums[ptr1];</span><br><span class="line">            ptr2 = nums[ptr2];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ptr1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">searchMatrix</span><span class="params">(<span class="keyword">int</span>[][] matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = matrix.length;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> m = matrix[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">if</span>(m==<span class="number">0</span>)<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = m*n-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(r&gt;=l)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(matrix[mid/m][mid%m]==target)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(matrix[mid/m][mid%m]&gt;target)r = mid-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(matrix[mid/m][mid%m]&lt;target)l = mid+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tortoise = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> here = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            tortoise = nums[tortoise];</span><br><span class="line">            here = nums[nums[here]];</span><br><span class="line">        &#125;<span class="keyword">while</span>(tortoise!=here);</span><br><span class="line">        <span class="keyword">int</span> ptr1=nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> ptr2 = tortoise;</span><br><span class="line">        <span class="keyword">while</span>(ptr1!=ptr2)&#123;</span><br><span class="line">            ptr1 = nums[ptr1];</span><br><span class="line">            ptr2 = nums[ptr2];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ptr1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -504,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/29/Binary2/" rel="next" title="Binary2">
-                <i class="fa fa-chevron-left"></i> Binary2
+              <a href="/2019/08/02/Binary8/" rel="next" title="Binary8">
+                <i class="fa fa-chevron-left"></i> Binary8
               </a>
             
           </div>
@@ -514,8 +512,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/31/Binary4/" rel="prev" title="Binary4">
-                Binary4 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/03/Binary10/" rel="prev" title="Binary10">
+                Binary10 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -626,9 +624,7 @@
         
           
         
-          
-        
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -663,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题连接-https-leetcode-cn-com-problems-search-a-2d-matrix-submissions"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题连接][https://leetcode-cn.com/problems/search-a-2d-matrix/submissions/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-find-the-duplicate-number"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://leetcode-cn.com/problems/find-the-duplicate-number/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
             
 
           </div>
