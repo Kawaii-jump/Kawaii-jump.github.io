@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Kawaii-jump 的博客">
 <meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]给定一个二叉树，检查它是否是镜像对称的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T10:44:09.912Z">
+<meta property="og:updated_time" content="2019-08-13T12:34:14.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tree2">
 <meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]给定一个二叉树，检查它是否是镜像对称的。">
@@ -377,13 +377,23 @@
                 
               
 
-              <time title="创建时间：2019-08-12 18:21:05 / 修改时间：18:44:09" itemprop="dateCreated datePublished" datetime="2019-08-12T18:21:05+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 18:21:05" itemprop="dateCreated datePublished" datetime="2019-08-12T18:21:05+08:00">2019-08-12</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-13 20:34:14" itemprop="dateModified" datetime="2019-08-13T20:34:14+08:00">2019-08-13</time>
+              </span>
             
           
 
@@ -447,10 +457,8 @@
 <a id="more"></a>
 
 <p>例如，二叉树<code>[1,2,2,3,4,4,3]</code>是对称的。</p>
-<p>   1</p>
-<p>   / <br>  2   2<br> / \ / <br>3  4 4  3<br>但是下面这个<code>[1,2,2,null,3,null,3]</code>则不是镜像对称的:</p>
-<p>   1</p>
-<p>   / <br>  2   2<br>   \   <br>   3    3</p>
+<pre><code>1</code></pre><p>   / \<br>  2   2<br> / \ / \<br>3  4 4  3<br>但是下面这个<code>[1,2,2,null,3,null,3]</code>则不是镜像对称的:</p>
+<pre><code>1</code></pre><p>   / \<br>  2   2<br>   \   \<br>   3    3</p>
 <h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>​        要检测二叉树是否是镜像，从根节点开始左右同时遍历，分两对；首先，左子树向左节点遍历与右子树与右节点遍历，这是第一对，第二对，左子树向右节点遍历，右子树向左节点遍历，过程中判断每个节点的<code>val</code>是否相等，不相等直接返回<code>false</code>、相等就继续向下遍历，直到走完整个树</p>
 <h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(TreeNode* t1,TreeNode* t2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t1==<span class="literal">NULL</span>&amp;&amp;t2==<span class="literal">NULL</span>)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>((t1==<span class="literal">NULL</span>&amp;&amp;t2!=<span class="literal">NULL</span>)||(t2==<span class="literal">NULL</span>&amp;&amp;t1!=<span class="literal">NULL</span>))<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(t1-&gt;val==t2-&gt;val)<span class="keyword">return</span> judge(t1-&gt;right,t2-&gt;left)&amp;&amp;judge(t1-&gt;left,t2-&gt;right);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> judge(root-&gt;left,root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -508,6 +516,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/13/Tree3/" rel="prev" title="Tree3">
+                Tree3 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -577,7 +589,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
