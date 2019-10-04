@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]给定一个二叉树，检查它是否是镜像对称的。">
-<meta name="keywords" content="树">
+  <meta name="description" content="原题描述[题目链接][https://leetcode-cn.com/problems/longest-increasing-subsequence/]给定一个无序的整数数组，找到其中最长上升子序列的长度。">
+<meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tree2">
-<meta property="og:url" content="http://yoursite.com/2019/08/12/Tree2/index.html">
+<meta property="og:title" content="dynamicProgramming6">
+<meta property="og:url" content="http://yoursite.com/2019/10/04/dynamicProgramming6/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]给定一个二叉树，检查它是否是镜像对称的。">
+<meta property="og:description" content="原题描述[题目链接][https://leetcode-cn.com/problems/longest-increasing-subsequence/]给定一个无序的整数数组，找到其中最长上升子序列的长度。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-13T12:46:04.683Z">
+<meta property="og:updated_time" content="2019-10-04T12:41:13.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tree2">
-<meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]给定一个二叉树，检查它是否是镜像对称的。">
+<meta name="twitter:title" content="dynamicProgramming6">
+<meta name="twitter:description" content="原题描述[题目链接][https://leetcode-cn.com/problems/longest-increasing-subsequence/]给定一个无序的整数数组，找到其中最长上升子序列的长度。">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/12/Tree2/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/04/dynamicProgramming6/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>Tree2 | Kawaii-jump 的博客</title>
+  <title>dynamicProgramming6 | Kawaii-jump 的博客</title>
   
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/Tree2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/04/dynamicProgramming6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kawaii-jump">
@@ -351,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Tree2
+          <h1 class="post-title" itemprop="name headline">dynamicProgramming6
 
               
             
@@ -377,23 +377,13 @@
                 
               
 
-              <time title="创建时间：2019-08-12 18:21:05" itemprop="dateCreated datePublished" datetime="2019-08-12T18:21:05+08:00">2019-08-12</time>
+              <time title="创建时间：2019-10-04 20:32:21 / 修改时间：20:41:13" itemprop="dateCreated datePublished" datetime="2019-10-04T20:32:21+08:00">2019-10-04</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-13 20:46:04" itemprop="dateModified" datetime="2019-08-13T20:46:04+08:00">2019-08-13</time>
-              </span>
             
           
 
@@ -413,7 +403,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/Tree/" itemprop="url" rel="index"><span itemprop="name">Tree</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/dynamicProgramming/" itemprop="url" rel="index"><span itemprop="name">dynamicProgramming</span></a></span>
 
                 
                 
@@ -453,14 +443,22 @@
       
 
       
-        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-symmetric-tree"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-symmetric-tree" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/symmetric-tree/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/symmetric-tree/]</a></h4><p>给定一个二叉树，检查它是否是镜像对称的。</p>
+        <h4 id="原题描述-题目链接-https-leetcode-cn-com-problems-longest-increasing-subsequence"><a href="#原题描述-题目链接-https-leetcode-cn-com-problems-longest-increasing-subsequence" class="headerlink" title="原题描述[题目链接][https://leetcode-cn.com/problems/longest-increasing-subsequence/]"></a>原题描述[题目链接][<a href="https://leetcode-cn.com/problems/longest-increasing-subsequence/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-increasing-subsequence/]</a></h4><p>给定一个无序的整数数组，找到其中最长上升子序列的长度。</p>
 <a id="more"></a>
 
-<p>例如，二叉树<code>[1,2,2,3,4,4,3]</code>是对称的。<br>    1<br>   / \<br>  2   2<br> / \ / \<br>3  4 4  3<br>但是下面这个<code>[1,2,2,null,3,null,3]</code>则不是镜像对称的:<br>    1<br>   / \<br>  2   2<br>   \   \<br>   3    3</p>
-<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>​        要检测二叉树是否是镜像，从根节点开始左右同时遍历，分两对；首先，左子树向左节点遍历与右子树与右节点遍历，这是第一对，第二对，左子树向右节点遍历，右子树向左节点遍历，过程中判断每个节点的<code>val</code>是否相等，不相等直接返回<code>false</code>、相等就继续向下遍历，直到走完整个树</p>
-<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(TreeNode* t1,TreeNode* t2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(t1==<span class="literal">NULL</span>&amp;&amp;t2==<span class="literal">NULL</span>)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>((t1==<span class="literal">NULL</span>&amp;&amp;t2!=<span class="literal">NULL</span>)||(t2==<span class="literal">NULL</span>&amp;&amp;t1!=<span class="literal">NULL</span>))<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(t1-&gt;val==t2-&gt;val)<span class="keyword">return</span> judge(t1-&gt;right,t2-&gt;left)&amp;&amp;judge(t1-&gt;left,t2-&gt;right);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> judge(root-&gt;left,root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [10,9,2,5,3,7,101,18]</span><br><span class="line">输出: 4 </span><br><span class="line">解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。</span><br></pre></td></tr></table></figure>
 
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">judge</span><span class="params">(TreeNode l,TreeNode r)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==<span class="keyword">null</span>&amp;&amp;r==<span class="keyword">null</span>)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>((l==<span class="keyword">null</span>&amp;&amp;r!=<span class="keyword">null</span>)||(l!=<span class="keyword">null</span>&amp;&amp;r==<span class="keyword">null</span>))<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(l.val==r.val)<span class="keyword">return</span> judge(l.left,r.right)&amp;&amp;judge(l.right,r.left);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSymmetric</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> judge(root.left,root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<ul>
+<li>可能会有多种最长上升子序列的组合，你只需要输出对应的长度即可。</li>
+<li>你算法的时间复杂度应该为 O(<em>n2</em>) 。</li>
+</ul>
+<p><strong>进阶:</strong> 你能将算法的时间复杂度降低到 O(<em>n</em> log <em>n</em>) 吗?</p>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>另开一个数组<code>dp</code>，用于存放当前节点的最长上升子序列，遍历所给的数组，遍历过程中<strong>更新</strong>dp数组；如果满足<code>nums[i]&gt;nums[j]</code>更新，即<code>dp[i]  = max(dp[i],dp[j]+1)</code>;遍历下一个节点遍历前<strong>更新</strong>最长子序列的长度；<code>m = max(m,dp[i])</code>，最后返回结果<code>m</code>，即可；</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLIS</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">       <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(nums.size(),<span class="number">1</span>);</span><br><span class="line">       <span class="keyword">int</span> m =<span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.size();i++)&#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">               <span class="keyword">if</span>(nums[i]&gt;nums[j])</span><br><span class="line">                    dp[i] = max(dp[i],dp[j]+<span class="number">1</span>);</span><br><span class="line">           &#125;</span><br><span class="line">           m = max(m,dp[i]);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLIS</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[i]&gt;nums[j])</span><br><span class="line">                    dp[i] = Math.max(dp[i],dp[j]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            m = Math.max(m,dp[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -492,7 +490,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/树/" rel="tag"># 树</a>
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
           
         </div>
       
@@ -505,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/11/Tree1/" rel="next" title="Tree1">
-                <i class="fa fa-chevron-left"></i> Tree1
+              <a href="/2019/10/03/dynamicProgramming5/" rel="next" title="dynamicProgramming5">
+                <i class="fa fa-chevron-left"></i> dynamicProgramming5
               </a>
             
           </div>
@@ -514,10 +512,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/13/Tree3/" rel="prev" title="Tree3">
-                Tree3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -690,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-symmetric-tree"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://leetcode-cn.com/problems/symmetric-tree/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#原题描述-题目链接-https-leetcode-cn-com-problems-longest-increasing-subsequence"><span class="nav-number">1.</span> <span class="nav-text">原题描述[题目链接][https://leetcode-cn.com/problems/longest-increasing-subsequence/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
             
 
           </div>
