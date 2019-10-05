@@ -93,18 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="题目描述[原题链接][https://leetcode-cn.com/problems/decode-ways/]一条包含字母 A-Z 的消息通过以下方式进行了编码：">
+  <meta name="description" content="题目描述[原题链接][https://leetcode-cn.com/problems/edit-distance/]给定两个单词 word1 和 word2*，计算出将 *word1 转换成 word2 所使用的最少操作数 。">
 <meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dynamicProgramming4">
-<meta property="og:url" content="http://yoursite.com/2019/10/02/dynamicProgramming4/index.html">
+<meta property="og:title" content="dynamicProgramming7">
+<meta property="og:url" content="http://yoursite.com/2019/10/05/dynamicProgramming7/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/decode-ways/]一条包含字母 A-Z 的消息通过以下方式进行了编码：">
+<meta property="og:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/edit-distance/]给定两个单词 word1 和 word2*，计算出将 *word1 转换成 word2 所使用的最少操作数 。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-02T12:41:06.706Z">
+<meta property="og:updated_time" content="2019-10-05T11:51:58.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dynamicProgramming4">
-<meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/decode-ways/]一条包含字母 A-Z 的消息通过以下方式进行了编码：">
+<meta name="twitter:title" content="dynamicProgramming7">
+<meta name="twitter:description" content="题目描述[原题链接][https://leetcode-cn.com/problems/edit-distance/]给定两个单词 word1 和 word2*，计算出将 *word1 转换成 word2 所使用的最少操作数 。">
 
 
 
@@ -112,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/10/02/dynamicProgramming4/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/05/dynamicProgramming7/">
 
 
 
@@ -123,7 +123,7 @@
 </script>
 
   
-  <title>dynamicProgramming4 | Kawaii-jump 的博客</title>
+  <title>dynamicProgramming7 | Kawaii-jump 的博客</title>
   
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/02/dynamicProgramming4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/05/dynamicProgramming7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kawaii-jump">
@@ -351,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">dynamicProgramming4
+          <h1 class="post-title" itemprop="name headline">dynamicProgramming7
 
               
             
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-10-02 20:30:08 / 修改时间：20:41:06" itemprop="dateCreated datePublished" datetime="2019-10-02T20:30:08+08:00">2019-10-02</time>
+              <time title="创建时间：2019-10-05 19:48:40 / 修改时间：19:51:58" itemprop="dateCreated datePublished" datetime="2019-10-05T19:48:40+08:00">2019-10-05</time>
             </span>
           
 
@@ -443,25 +443,25 @@
       
 
       
-        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-decode-ways"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-decode-ways" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/decode-ways/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/decode-ways/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/decode-ways/]</a></h4><p>一条包含字母 <code>A-Z</code> 的消息通过以下方式进行了编码：</p>
+        <h4 id="题目描述-原题链接-https-leetcode-cn-com-problems-edit-distance"><a href="#题目描述-原题链接-https-leetcode-cn-com-problems-edit-distance" class="headerlink" title="题目描述[原题链接][https://leetcode-cn.com/problems/edit-distance/]"></a>题目描述[原题链接][<a href="https://leetcode-cn.com/problems/edit-distance/]" target="_blank" rel="noopener">https://leetcode-cn.com/problems/edit-distance/]</a></h4><p>给定两个单词 <em>word1</em> 和 <em>word2*，计算出将 *word1</em> 转换成 <em>word2</em> 所使用的最少操作数 。</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;A&apos; -&gt; 1</span><br><span class="line">&apos;B&apos; -&gt; 2</span><br><span class="line">...</span><br><span class="line">&apos;Z&apos; -&gt; 26</span><br></pre></td></tr></table></figure>
-
-<p>给定一个只包含数字的<strong>非空</strong>字符串，请计算解码方法的总数。</p>
+<p>你可以对一个单词进行如下三种操作：</p>
+<ol>
+<li>插入一个字符</li>
+<li>删除一个字符</li>
+<li>替换一个字符</li>
+</ol>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;12&quot;</span><br><span class="line">输出: 2</span><br><span class="line">解释: 它可以解码为 &quot;AB&quot;（1 2）或者 &quot;L&quot;（12）。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: word1 = &quot;horse&quot;, word2 = &quot;ros&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: </span><br><span class="line">horse -&gt; rorse (将 &apos;h&apos; 替换为 &apos;r&apos;)</span><br><span class="line">rorse -&gt; rose (删除 &apos;r&apos;)</span><br><span class="line">rose -&gt; ros (删除 &apos;e&apos;)</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;226&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 它可以解码为 &quot;BZ&quot; (2 26), &quot;VF&quot; (22 6), 或者 &quot;BBF&quot; (2 2 6) 。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: word1 = &quot;intention&quot;, word2 = &quot;execution&quot;</span><br><span class="line">输出: 5</span><br><span class="line">解释: </span><br><span class="line">intention -&gt; inention (删除 &apos;t&apos;)</span><br><span class="line">inention -&gt; enention (将 &apos;i&apos; 替换为 &apos;e&apos;)</span><br><span class="line">enention -&gt; exention (将 &apos;n&apos; 替换为 &apos;x&apos;)</span><br><span class="line">exention -&gt; exection (将 &apos;n&apos; 替换为 &apos;c&apos;)</span><br><span class="line">exection -&gt; execution (插入 &apos;u&apos;)</span><br></pre></td></tr></table></figure>
 
-<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>分三种情况讨论：</p>
-<pre><code>- `s[i]==&apos;0&apos;`时，`s[i-1]==&apos;1&apos;`或`s[i-1]==&apos;2&apos;`时，`dp[i]=dp[i-2]`,否则`return 0`;
-- `s[i-1]==&apos;1&apos;`时,`dp[i]=dp[i-1]+dp[i-2]`;
-- `s[i-1]==&apos;2&apos;`并且`s[i]&gt;=&apos;1&apos;&amp;&amp;s[i]&lt;=&apos;6&apos;`此时`dp[i]=dp[i-1]+dp[i-2]`;</code></pre><p>分析可知，结果只和前两项有关，所以空间复杂度可以从<code>O(n)</code>降到<code>O(1)</code>;</p>
-<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'0'</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> pre = <span class="number">1</span>,curr = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> tmp = curr;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'0'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(s[i<span class="number">-1</span>]==<span class="string">'1'</span>||s[i<span class="number">-1</span>] == <span class="string">'2'</span>)curr=pre;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s[i<span class="number">-1</span>]==<span class="string">'1'</span>||(s[i<span class="number">-1</span>]==<span class="string">'2'</span>&amp;&amp;s[i]&gt;=<span class="string">'1'</span>&amp;&amp;s[i]&lt;=<span class="string">'6'</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                curr = tmp+pre;</span><br><span class="line">            &#125;</span><br><span class="line">            pre = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> curr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>。。。。。</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minDistance</span><span class="params">(<span class="built_in">string</span> word1, <span class="built_in">string</span> word2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = word1.size(), m = word2.size();</span><br><span class="line">        <span class="keyword">if</span>(!n||!m)<span class="keyword">return</span> m+n;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; f =</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;(n+<span class="number">1</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(m+<span class="number">1</span>));</span><br><span class="line">        f[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)f[i][<span class="number">0</span>] = i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)f[<span class="number">0</span>][j] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">                f[i][j] = f[i<span class="number">-1</span>][j<span class="number">-1</span>]+</span><br><span class="line">                        (word1[i<span class="number">-1</span>]!=word2[j<span class="number">-1</span>]);</span><br><span class="line">                f[i][j] = min(f[i][j],f[i<span class="number">-1</span>][j]+<span class="number">1</span>);</span><br><span class="line">                f[i][j] = min(f[i][j],f[i][j<span class="number">-1</span>]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> f[n][m];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.charAt(<span class="number">0</span>)==<span class="string">'0'</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> pre =<span class="number">1</span>,curr =<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> tmp = curr;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i) == <span class="string">'0'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(s.charAt(i-<span class="number">1</span>)==<span class="string">'1'</span>||s.charAt(i-<span class="number">1</span>)==<span class="string">'2'</span>)&#123;</span><br><span class="line">                    curr = pre;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i-<span class="number">1</span>)==<span class="string">'1'</span>||(s.charAt(i-<span class="number">1</span>)==<span class="string">'2'</span>&amp;&amp;s.charAt(i)&gt;=<span class="string">'1'</span>&amp;&amp;s.charAt(i)&lt;=<span class="string">'6'</span>))&#123;</span><br><span class="line">                curr = tmp + pre;</span><br><span class="line">            &#125;</span><br><span class="line">            pre = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> curr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minDistance</span><span class="params">(String word1, String word2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = word1.length(),m = word2.length();</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>||m==<span class="number">0</span>)<span class="keyword">return</span> m+n;</span><br><span class="line">        <span class="keyword">int</span>[][] f = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">        f[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)f[i][<span class="number">0</span>] = i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)f[<span class="number">0</span>][j] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span>(word1.charAt(i-<span class="number">1</span>)!=word2.charAt(j-<span class="number">1</span>))t=<span class="number">1</span>;</span><br><span class="line">                f[i][j] = f[i-<span class="number">1</span>][j-<span class="number">1</span>]+t;</span><br><span class="line">                f[i][j] = Math.min(f[i][j],f[i-<span class="number">1</span>][j]+<span class="number">1</span>);</span><br><span class="line">                f[i][j] = Math.min(f[i][j],f[i][j-<span class="number">1</span>]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> f[n][m];</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -506,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/01/dynamicProgramming3/" rel="next" title="dynamicProgramming3">
-                <i class="fa fa-chevron-left"></i> dynamicProgramming3
+              <a href="/2019/10/04/dynamicProgramming6/" rel="next" title="dynamicProgramming6">
+                <i class="fa fa-chevron-left"></i> dynamicProgramming6
               </a>
             
           </div>
@@ -515,10 +515,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/03/dynamicProgramming5/" rel="prev" title="dynamicProgramming5">
-                dynamicProgramming5 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -691,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-decode-ways"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://leetcode-cn.com/problems/decode-ways/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-leetcode-cn-com-problems-edit-distance"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://leetcode-cn.com/problems/edit-distance/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">2.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
             
 
           </div>
