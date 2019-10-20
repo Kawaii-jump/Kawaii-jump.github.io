@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="力扣159场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-159/]一次和大佬打比赛的周日，程序员的周末娱乐活动。HHHH">
+<meta name="keywords" content="力扣周赛159场">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WeeklyContest159">
+<meta property="og:url" content="http://yoursite.com/2019/10/20/WeeklyContest159/index.html">
+<meta property="og:site_name" content="Kawaii-jump 的博客">
+<meta property="og:description" content="力扣159场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-159/]一次和大佬打比赛的周日，程序员的周末娱乐活动。HHHH">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/10/19/untitled-diagram-2.jpg">
+<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/10/19/untitled-diagram-1.jpg">
+<meta property="og:updated_time" content="2019-10-20T12:58:50.875Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WeeklyContest159">
+<meta name="twitter:description" content="力扣159场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-159/]一次和大佬打比赛的周日，程序员的周末娱乐活动。HHHH">
+<meta name="twitter:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/10/19/untitled-diagram-2.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/10/20/WeeklyContest159/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>WeeklyContest159 | Kawaii-jump 的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kawaii-jump 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">从入门到放弃</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/WeeklyContest159/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kawaii-jump">
+      <meta itemprop="description" content="Java、C++">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kawaii-jump 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">WeeklyContest159
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-20 20:19:25 / 修改时间：20:58:50" itemprop="dateCreated datePublished" datetime="2019-10-20T20:19:25+08:00">2019-10-20</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/WeeklyContest/" itemprop="url" rel="index"><span itemprop="name">WeeklyContest</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="力扣159场周赛-链接-https-leetcode-cn-com-contest-weekly-contest-159"><a href="#力扣159场周赛-链接-https-leetcode-cn-com-contest-weekly-contest-159" class="headerlink" title="力扣159场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-159/]"></a>力扣159场周赛[链接][<a href="https://leetcode-cn.com/contest/weekly-contest-159/]" target="_blank" rel="noopener">https://leetcode-cn.com/contest/weekly-contest-159/]</a></h4><p>一次和大佬打比赛的周日，程序员的周末娱乐活动。HHHH</p>
+<a id="more"></a>
+
+<h3 id="第一题：签到题"><a href="#第一题：签到题" class="headerlink" title="第一题：签到题"></a>第一题：签到题</h3><h3 id="5230-缀点成线"><a href="#5230-缀点成线" class="headerlink" title="5230. 缀点成线"></a>5230. 缀点成线</h3><p>在一个 XY 坐标系中有一些点，我们用数组 <code>coordinates</code> 来分别记录它们的坐标，其中 <code>coordinates[i] = [x, y]</code> 表示横坐标为 <code>x</code>、纵坐标为 <code>y</code> 的点。</p>
+<p>请你来判断，这些点是否在该坐标系中属于同一条直线上，是则返回 <font color="#c7254e" face="Menlo, Monaco, Consolas, Courier New, monospace">true</font>，否则请返回 <font color="#c7254e" face="Menlo, Monaco, Consolas, Courier New, monospace">false</font>。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/10/19/untitled-diagram-2.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><strong><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/10/19/untitled-diagram-1.jpg" alt="img"></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>2 &lt;= coordinates.length &lt;= 1000</code></li>
+<li><code>coordinates[i].length == 2</code></li>
+<li><code>-10^4 &lt;= coordinates[i][0], coordinates[i][1] &lt;= 10^4</code></li>
+<li><code>coordinates</code> 中不含重复的点</li>
+</ul>
+<h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h4><p>做这题时，要注意的就是要注意细节，刚做的时候害怕精度会卡，没有直接计算<code>斜率</code>存进变量中,让后直接推出方程<code>y=kx+b</code>就可以了；就这样就可以了！哈哈哈，当时没有特判斜率为0的情况，没想到数据没有卡请两个点的数据，逃过一劫；（某位大佬踩坑了！手动滑稽）</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">checkStraightLine</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; c)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> x1=c[<span class="number">0</span>][<span class="number">0</span>],x2=c[<span class="number">1</span>][<span class="number">0</span>],y1=c[<span class="number">0</span>][<span class="number">1</span>],y2=c[<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(!(x1-x2))&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;c.size();i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(c[i][<span class="number">0</span>]==x1)<span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;c.size();i++)&#123;</span><br><span class="line">            <span class="keyword">double</span> a=c[i][<span class="number">0</span>],b=c[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(b==(y1-y2)/(x1-x2)*a+(y1-(y1-y2)/(x1-x2)*x1))<span class="keyword">continue</span>;</span><br><span class="line">               <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二题：set的应用、字符串应用"><a href="#第二题：set的应用、字符串应用" class="headerlink" title="第二题：set的应用、字符串应用"></a>第二题：set的应用、字符串应用</h3><h4 id="5231-删除子文件夹"><a href="#5231-删除子文件夹" class="headerlink" title="5231. 删除子文件夹"></a>5231. 删除子文件夹</h4><p>你是一位系统管理员，手里有一份文件夹列表 <code>folder</code>，你的任务是要删除该列表中的所有 <strong>子文件夹</strong>，并以 <strong>任意顺序</strong> 返回剩下的文件夹。</p>
+<p>我们这样定义「子文件夹」：</p>
+<ul>
+<li>如果文件夹 <code>folder[i]</code> 位于另一个文件夹 <code>folder[j]</code> 下，那么 <code>folder[i]</code> 就是 <code>folder[j]</code> 的子文件夹。</li>
+</ul>
+<p>文件夹的「路径」是由一个或多个按以下格式串联形成的字符串：</p>
+<ul>
+<li><code>/</code> 后跟一个或者多个小写英文字母。</li>
+</ul>
+<p>例如，<code>/leetcode</code> 和 <code>/leetcode/problems</code> 都是有效的路径，而空字符串和 <code>/</code> 不是。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：folder = [&quot;/a&quot;,&quot;/a/b&quot;,&quot;/c/d&quot;,&quot;/c/d/e&quot;,&quot;/c/f&quot;]</span><br><span class="line">输出：[&quot;/a&quot;,&quot;/c/d&quot;,&quot;/c/f&quot;]</span><br><span class="line">解释：&quot;/a/b/&quot; 是 &quot;/a&quot; 的子文件夹，而 &quot;/c/d/e&quot; 是 &quot;/c/d&quot; 的子文件夹。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：folder = [&quot;/a&quot;,&quot;/a/b/c&quot;,&quot;/a/b/d&quot;]</span><br><span class="line">输出：[&quot;/a&quot;]</span><br><span class="line">解释：文件夹 &quot;/a/b/c&quot; 和 &quot;/a/b/d/&quot; 都会被删除，因为它们都是 &quot;/a&quot; 的子文件夹。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：folder = [&quot;/a/b/c&quot;,&quot;/a/b/d&quot;,&quot;/a/b/ca&quot;]</span><br><span class="line">输出：[&quot;/a/b/c&quot;,&quot;/a/b/ca&quot;,&quot;/a/b/d&quot;]</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= folder.length &lt;= 4 * 10^4</code></li>
+<li><code>2 &lt;= folder[i].length &lt;= 100</code></li>
+<li><code>folder[i]</code> 只包含小写字母和 <code>/</code></li>
+<li><code>folder[i]</code> 总是以字符 <code>/</code> 起始</li>
+<li>每个文件夹名都是唯一的</li>
+</ul>
+<h4 id="算法分析-1"><a href="#算法分析-1" class="headerlink" title="算法分析"></a>算法分析</h4><p>考察的知识点：</p>
+<ul>
+<li><code>sort</code>的重载，即自定义排序</li>
+<li>按字符串长度排序</li>
+<li>字符串的切割</li>
+<li><code>set</code>容器的应用</li>
+</ul>
+<p>基本思路：首先，将给出的字符串数组进行排序操作；然后读取字符串，遇到<code>/</code>的时候判断，在<code>set</code>中是否含有<code>s.substring(0,j)</code>子串，有直接跳过当前字符串，直到最后，没有包含就插入<code>set</code>中，最后返回<code>set</code>容器中的元素就完事了；多亏大佬指点才过；主要卡在<strong><code>按字符串长度排序</code></strong>;</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; removeSubfolders(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; folder) &#123;</span><br><span class="line">        <span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; <span class="built_in">set</span>;</span><br><span class="line">        sort(folder.begin(),folder.end(),[](<span class="keyword">const</span> <span class="built_in">string</span> &amp;a,<span class="keyword">const</span> <span class="built_in">string</span> &amp;b)&#123;<span class="keyword">return</span> a.length()&lt;b.length();&#125;);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;folder.size();i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;folder[i].size();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(folder[i][j]==<span class="string">'/'</span>)&#123;</span><br><span class="line">                    <span class="built_in">string</span> s = folder[i].substr(<span class="number">0</span>,j);</span><br><span class="line">                    <span class="keyword">if</span>(<span class="built_in">set</span>.count(s))&#123;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">set</span>.count(folder[i]))<span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(j==folder[i].size())&#123;</span><br><span class="line">                <span class="built_in">set</span>.insert(folder[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; ans;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> s:<span class="built_in">set</span>)&#123;</span><br><span class="line">            ans.push_back(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">removeSubfolders</span><span class="params">(String[] folder)</span> </span>&#123;</span><br><span class="line">        Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        Arrays.sort(folder,<span class="keyword">new</span> Comparator&lt;String&gt;() &#123; </span><br><span class="line"></span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span>(o1.length()&gt;o2.length())ans=<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(o1.length()&lt;o2.length())ans=-<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">return</span> ans;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;folder.length;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;folder[i].length();j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(folder[i].charAt(j)==<span class="string">'/'</span>)&#123;</span><br><span class="line">                    String s = folder[i].substring(<span class="number">0</span>,j);</span><br><span class="line">                    <span class="keyword">if</span>(set.contains(s))&#123;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(set.contains(folder[i]))&#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(j==folder[i].length())</span><br><span class="line">                set.add(folder[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;String&gt;(set);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三题：滑动窗口、双指针"><a href="#第三题：滑动窗口、双指针" class="headerlink" title="第三题：滑动窗口、双指针"></a>第三题：滑动窗口、双指针</h3><h3 id="5232-替换子串得到平衡字符串"><a href="#5232-替换子串得到平衡字符串" class="headerlink" title="5232. 替换子串得到平衡字符串"></a>5232. 替换子串得到平衡字符串</h3><p>有一个只含有 <code>&#39;Q&#39;, &#39;W&#39;, &#39;E&#39;, &#39;R&#39;</code> 四种字符，且长度为 <code>n</code> 的字符串。</p>
+<p>假如在该字符串中，这四个字符都恰好出现 <code>n/4</code> 次，那么它就是一个「平衡字符串」。</p>
+<p>给你一个这样的字符串 <code>s</code>，请通过「替换子串」的方式，使原字符串 <code>s</code> 变成一个「平衡字符串」。</p>
+<p>你可以用和「待替换子串」长度相同的 <strong>任何</strong> 其他字符串来完成替换。</p>
+<p>请返回待替换子串的最小可能长度。</p>
+<p>如果原字符串自身就是一个平衡字符串，则返回 <code>0</code>。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;QWER&quot;</span><br><span class="line">输出：0</span><br><span class="line">解释：s 已经是平衡的了。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;QQWE&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：我们需要把一个 &apos;Q&apos; 替换成 &apos;R&apos;，这样得到的 &quot;RQWE&quot; (或 &quot;QRWE&quot;) 是平衡的。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;QQQW&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：我们可以把前面的 &quot;QQ&quot; 替换成 &quot;ER&quot;。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;QQQQ&quot;</span><br><span class="line">输出：3</span><br><span class="line">解释：我们可以替换后 3 个 &apos;Q&apos;，使 s = &quot;QWER&quot;。</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
+<li><code>s.length</code> 是 <code>4</code> 的倍数</li>
+<li><code>s</code> 中只含有 <code>&#39;Q&#39;</code>, <code>&#39;W&#39;</code>, <code>&#39;E&#39;</code>, <code>&#39;R&#39;</code> 四种字符</li>
+</ul>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>按照几步进行：</p>
+<ul>
+<li>遍历字符串记录<code>&#39;Q&#39;</code>,<code>&#39;W&#39;</code>,<code>&#39;E&#39;</code>,<code>&#39;R&#39;</code>字符的个数</li>
+<li>计算平衡时各个字符的个数，找到要替换哪几个字符以及个数</li>
+<li>找到包含上面字符的最小窗口</li>
+</ul>
+<p>基本思路：首先字符串遍历，计数字符个数，计算目标字符的个数，找到满足条件的窗口，一直遍历到字符串尾部，满足条件时更新最小窗口的大小；我刚开始做的时候没有思路，然后大佬一句点醒，抬手就来；哈哈哈</p>
+<h4 id="C-代码-1"><a href="#C-代码-1" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">balancedString</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length()==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum[<span class="number">4</span>];</span><br><span class="line">        <span class="keyword">int</span> a[<span class="number">4</span>];</span><br><span class="line">        <span class="built_in">memset</span>(sum,<span class="number">0</span>,<span class="keyword">sizeof</span>(sum));</span><br><span class="line">        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'Q'</span>)sum[<span class="number">0</span>]++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i]==<span class="string">'W'</span>)sum[<span class="number">1</span>]++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i]==<span class="string">'E'</span>)sum[<span class="number">2</span>]++;</span><br><span class="line">            <span class="keyword">else</span> sum[<span class="number">3</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n=s.length()/<span class="number">4</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sum[i]&gt;n)sum[i]-=n;</span><br><span class="line">            <span class="keyword">else</span> sum[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sum[<span class="number">0</span>]==<span class="number">0</span>&amp;&amp;sum[<span class="number">1</span>]==<span class="number">0</span>&amp;&amp;sum[<span class="number">2</span>]==<span class="number">0</span>&amp;&amp;sum[<span class="number">3</span>]==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>,r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans = s.length();</span><br><span class="line">        <span class="keyword">for</span>(;r&lt;s.length();r++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[r]==<span class="string">'Q'</span>)a[<span class="number">0</span>]++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[r]==<span class="string">'W'</span>)a[<span class="number">1</span>]++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[r]==<span class="string">'E'</span>)a[<span class="number">2</span>]++;</span><br><span class="line">            <span class="keyword">else</span> a[<span class="number">3</span>]++;</span><br><span class="line">            <span class="keyword">while</span>(r&gt;=l&amp;&amp;a[<span class="number">0</span>]&gt;=sum[<span class="number">0</span>]&amp;&amp;a[<span class="number">1</span>]&gt;=sum[<span class="number">1</span>]&amp;&amp;a[<span class="number">2</span>]&gt;=sum[<span class="number">2</span>]&amp;&amp;a[<span class="number">3</span>]&gt;=sum[<span class="number">3</span>])&#123;</span><br><span class="line">                ans = min(ans,r-l+<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span>(s[l]==<span class="string">'Q'</span>)a[<span class="number">0</span>]--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(s[l]==<span class="string">'W'</span>)a[<span class="number">1</span>]--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(s[l]==<span class="string">'E'</span>)a[<span class="number">2</span>]--;</span><br><span class="line">                <span class="keyword">else</span> a[<span class="number">3</span>]--;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码-1"><a href="#Java代码-1" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">balancedString</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length()==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] sum = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)==<span class="string">'Q'</span>)&#123;</span><br><span class="line">                sum[<span class="number">0</span>]++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i)==<span class="string">'W'</span>)&#123;</span><br><span class="line">                sum[<span class="number">1</span>]++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i)==<span class="string">'E'</span>)&#123;</span><br><span class="line">                sum[<span class="number">2</span>]++;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                sum[<span class="number">3</span>]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> t = s.length()/<span class="number">4</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sum[i]&gt;t)sum[i]=sum[i]-t;</span><br><span class="line">            <span class="keyword">else</span> sum[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sum[<span class="number">0</span>]==<span class="number">0</span>&amp;&amp;sum[<span class="number">1</span>]==<span class="number">0</span>&amp;&amp;sum[<span class="number">2</span>]==<span class="number">0</span>&amp;&amp;sum[<span class="number">3</span>]==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l=<span class="number">0</span>,r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans = s.length();</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line">        <span class="keyword">for</span>(;r&lt;s.length();r++)&#123;</span><br><span class="line">             <span class="keyword">if</span>(s.charAt(r)==<span class="string">'Q'</span>)&#123;</span><br><span class="line">                a[<span class="number">0</span>]++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(r)==<span class="string">'W'</span>)&#123;</span><br><span class="line">                a[<span class="number">1</span>]++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(r)==<span class="string">'E'</span>)&#123;</span><br><span class="line">                a[<span class="number">2</span>]++;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                a[<span class="number">3</span>]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(r&gt;=l&amp;&amp;a[<span class="number">0</span>]&gt;=sum[<span class="number">0</span>]&amp;&amp;a[<span class="number">1</span>]&gt;=sum[<span class="number">1</span>]&amp;&amp;a[<span class="number">2</span>]&gt;=sum[<span class="number">2</span>]&amp;&amp;a[<span class="number">3</span>]&gt;=sum[<span class="number">3</span>])&#123;</span><br><span class="line">                ans = Math.min(ans,r-l+<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span>(s.charAt(l)==<span class="string">'Q'</span>)&#123;</span><br><span class="line">                    a[<span class="number">0</span>]--;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(l)==<span class="string">'W'</span>)&#123;</span><br><span class="line">                    a[<span class="number">1</span>]--;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(l)==<span class="string">'E'</span>)&#123;</span><br><span class="line">                    a[<span class="number">2</span>]--;</span><br><span class="line">                &#125;<span class="keyword">else</span> a[<span class="number">3</span>]--;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四题：树状数组、离散化、动态规划（DP）"><a href="#第四题：树状数组、离散化、动态规划（DP）" class="headerlink" title="第四题：树状数组、离散化、动态规划（DP）"></a>第四题：树状数组、离散化、动态规划（DP）</h3><h4 id="太难了"><a href="#太难了" class="headerlink" title="太难了"></a>太难了</h4><p>这一题一脸懵逼，自己太菜了，汉奇大佬tql,只想说一句:<strong>LHQ牛逼</strong>；下面看大佬表演（手动滑稽）：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; P;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">    <span class="keyword">int</span> h[maxn],ne[maxn],idx;</span><br><span class="line">    P e[maxn];</span><br><span class="line">    <span class="keyword">int</span> tree[maxn],dp[maxn],n=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x&amp;(-x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=x;i&lt;=n;i+=lowbit(i))</span><br><span class="line">            tree[i]=max(tree[i],val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add_pair</span><span class="params">(<span class="keyword">int</span> a,P b)</span></span>&#123;</span><br><span class="line">        e[idx]=b;</span><br><span class="line">        ne[idx]=h[a];</span><br><span class="line">        h[a]=idx++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=x;i;i-=lowbit(i))</span><br><span class="line">            ans=max(ans,tree[i]);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getid</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)(lower_bound(v.begin(),v.end(),x)-v.begin()+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">jobScheduling</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; st, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; ed, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; val)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">memset</span>(h,<span class="number">-1</span>,<span class="keyword">sizeof</span> h);</span><br><span class="line">        <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span> dp);</span><br><span class="line">        <span class="built_in">memset</span>(tree,<span class="number">0</span>,<span class="keyword">sizeof</span> tree);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> x:st) v.push_back(x);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> x:ed) v.push_back(x);</span><br><span class="line">        sort(v.begin(),v.end());</span><br><span class="line">        v.erase(unique(v.begin(),v.end()),v.end());</span><br><span class="line">        n=v.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;st.size();i++) st[i]=getid(st[i]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ed.size();i++) &#123;</span><br><span class="line">            ed[i]=getid(ed[i]);</span><br><span class="line">            add_pair(ed[i],&#123;st[i],val[i]&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            dp[i]=dp[i<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=h[i];j!=<span class="number">-1</span>;j=ne[j])&#123;</span><br><span class="line">                dp[i]=max(dp[i],get(e[j].first)+e[j].second);</span><br><span class="line">            &#125;</span><br><span class="line">            add(i,dp[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/力扣周赛159场/" rel="tag"># 力扣周赛159场</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/19/DFSArray/" rel="next" title="DFSArray">
+                <i class="fa fa-chevron-left"></i> DFSArray
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+  <p class="site-author-name" itemprop="name">Kawaii-jump</p>
+  <div class="site-description motion-element" itemprop="description">Java、C++</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#力扣159场周赛-链接-https-leetcode-cn-com-contest-weekly-contest-159"><span class="nav-number">1.</span> <span class="nav-text">力扣159场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-159/]</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#第一题：签到题"><span class="nav-number"></span> <span class="nav-text">第一题：签到题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5230-缀点成线"><span class="nav-number"></span> <span class="nav-text">5230. 缀点成线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法分析"><span class="nav-number">1.</span> <span class="nav-text">算法分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二题：set的应用、字符串应用"><span class="nav-number"></span> <span class="nav-text">第二题：set的应用、字符串应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5231-删除子文件夹"><span class="nav-number">1.</span> <span class="nav-text">5231. 删除子文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法分析-1"><span class="nav-number">2.</span> <span class="nav-text">算法分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">3.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">4.</span> <span class="nav-text">Java代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三题：滑动窗口、双指针"><span class="nav-number"></span> <span class="nav-text">第三题：滑动窗口、双指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5232-替换子串得到平衡字符串"><span class="nav-number"></span> <span class="nav-text">5232. 替换子串得到平衡字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">1.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码-1"><span class="nav-number">2.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码-1"><span class="nav-number">3.</span> <span class="nav-text">Java代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四题：树状数组、离散化、动态规划（DP）"><span class="nav-number"></span> <span class="nav-text">第四题：树状数组、离散化、动态规划（DP）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#太难了"><span class="nav-number">1.</span> <span class="nav-text">太难了</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kawaii-jump</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
