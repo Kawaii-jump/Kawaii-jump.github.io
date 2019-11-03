@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="力扣160场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-161]就过了一题，六百多排名，哭死。。。。。。。思维还是不行啊！有待加强。进入真题吧还是。。。">
+<meta name="keywords" content="力扣周赛161场">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WeeklyConstest161">
+<meta property="og:url" content="http://yoursite.com/2019/11/03/WeeklyContest161/index.html">
+<meta property="og:site_name" content="Kawaii-jump 的博客">
+<meta property="og:description" content="力扣160场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-161]就过了一题，六百多排名，哭死。。。。。。。思维还是不行啊！有待加强。进入真题吧还是。。。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-03T12:32:36.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WeeklyConstest161">
+<meta name="twitter:description" content="力扣160场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-161]就过了一题，六百多排名，哭死。。。。。。。思维还是不行啊！有待加强。进入真题吧还是。。。">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/11/03/WeeklyContest161/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>WeeklyConstest161 | Kawaii-jump 的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kawaii-jump 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">从入门到放弃</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/WeeklyContest161/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kawaii-jump">
+      <meta itemprop="description" content="Java、C++">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kawaii-jump 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">WeeklyConstest161
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-03 19:44:56 / 修改时间：20:32:36" itemprop="dateCreated datePublished" datetime="2019-11-03T19:44:56+08:00">2019-11-03</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/WeeklyContest/" itemprop="url" rel="index"><span itemprop="name">WeeklyContest</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <meta name="referrer" content="no-referrer">
+
+<h4 id="力扣160场周赛-链接-https-leetcode-cn-com-contest-weekly-contest-161"><a href="#力扣160场周赛-链接-https-leetcode-cn-com-contest-weekly-contest-161" class="headerlink" title="力扣160场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-161]"></a>力扣160场周赛[链接][<a href="https://leetcode-cn.com/contest/weekly-contest-161]" target="_blank" rel="noopener">https://leetcode-cn.com/contest/weekly-contest-161]</a></h4><p>就过了一题，六百多排名，哭死。。。。。。。思维还是不行啊！有待加强。进入真题吧还是。。。</p>
+<a id="more"></a>
+
+<h3 id="第一题：思维、规律题"><a href="#第一题：思维、规律题" class="headerlink" title="第一题：思维、规律题"></a>第一题：思维、规律题</h3><h3 id="5247-交换字符使得字符串相同"><a href="#5247-交换字符使得字符串相同" class="headerlink" title="5247. 交换字符使得字符串相同"></a>5247. 交换字符使得字符串相同</h3><p>有两个长度相同的字符串 <code>s1</code> 和 <code>s2</code>，且它们其中 <strong>只含有</strong> 字符 <code>&quot;x&quot;</code> 和 <code>&quot;y&quot;</code>，你需要通过「交换字符」的方式使这两个字符串相同。</p>
+<p>每次「交换字符」的时候，你都可以在两个字符串中各选一个字符进行交换。</p>
+<p>交换只能发生在两个不同的字符串之间，绝对不能发生在同一个字符串内部。也就是说，我们可以交换 <code>s1[i]</code> 和 <code>s2[j]</code>，但不能交换 <code>s1[i]</code> 和 <code>s1[j]</code>。</p>
+<p>最后，请你返回使 <code>s1</code> 和 <code>s2</code> 相同的最小交换次数，如果没有方法能够使得这两个字符串相同，则返回 <code>-1</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;xx&quot;, s2 = &quot;yy&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：</span><br><span class="line">交换 s1[0] 和 s2[1]，得到 s1 = &quot;yx&quot;，s2 = &quot;yx&quot;。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;xy&quot;, s2 = &quot;yx&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：</span><br><span class="line">交换 s1[0] 和 s2[0]，得到 s1 = &quot;yy&quot;，s2 = &quot;xx&quot; 。</span><br><span class="line">交换 s1[0] 和 s2[1]，得到 s1 = &quot;xy&quot;，s2 = &quot;xy&quot; 。</span><br><span class="line">注意，你不能交换 s1[0] 和 s1[1] 使得 s1 变成 &quot;yx&quot;，因为我们只能交换属于两个不同字符串的字符。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;xx&quot;, s2 = &quot;xy&quot;</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s1 = &quot;xxyyxyxyxx&quot;, s2 = &quot;xyyxyxxxyx&quot;</span><br><span class="line">输出：4</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s1.length, s2.length &lt;= 1000</code></li>
+<li><code>s1, s2</code> 只包含 <code>&#39;x&#39;</code> 或 <code>&#39;y&#39;</code>。</li>
+</ul>
+<h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h4><p>这是唯一过的题了。。。本题的思维并不难，分两种情况进行计数；搜先遍历数组，用<code>x</code>和<code>y</code>计数：</p>
+<ul>
+<li><code>s1[i]==&#39;x&#39;&amp;&amp;s2[i]==&#39;y&#39;</code>时x++；</li>
+<li><code>s1[i]==&#39;y&#39;&amp;&amp;s2[i]==&#39;x&#39;</code>时y++；</li>
+</ul>
+<p>计数完后分三种情况计算结果，用<code>ans</code>存放答案：</p>
+<ul>
+<li><code>ans+=x/2+y/2</code>，相同的情况可以进行一次换位满足；</li>
+<li>第一种情况<code>x%2==0&amp;&amp;y%2==0</code>,这种情况不用处理直接返回<code>ans</code>的值</li>
+<li>第二种情况<code>x%2==1&amp;&amp;y%2==1</code>,这种情况需要二次交换得到相同的字符串返回<code>ans+2</code></li>
+<li>第三种情况，不是之前的两种情况，则不能变成一样的字符串，直接返回<code>-1</code></li>
+</ul>
+<p>上代码</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minimumSwap</span><span class="params">(<span class="built_in">string</span> s1, <span class="built_in">string</span> s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.size()==<span class="number">0</span>&amp;&amp;s2.size()==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s1.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s1[i]==<span class="string">'x'</span>&amp;&amp;s2[i]==<span class="string">'y'</span>)&#123;</span><br><span class="line">                x++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s1[i]==<span class="string">'y'</span>&amp;&amp;s2[i]==<span class="string">'x'</span>)&#123;</span><br><span class="line">                y++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        ans+=x/<span class="number">2</span>+y/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(x%<span class="number">2</span>&amp;&amp;y%<span class="number">2</span>)<span class="keyword">return</span> ans+<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(!(x%<span class="number">2</span>)&amp;&amp;!(y%<span class="number">2</span>))<span class="keyword">return</span> ans;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumSwap</span><span class="params">(String s1, String s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s1.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s1.charAt(i)==<span class="string">'x'</span>&amp;&amp;s2.charAt(i)==<span class="string">'y'</span>)x++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s1.charAt(i)==<span class="string">'y'</span>&amp;&amp;s2.charAt(i)==<span class="string">'x'</span>)y++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        ans+=x/<span class="number">2</span>+y/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(x%<span class="number">2</span>==<span class="number">1</span>&amp;&amp;y%<span class="number">2</span>==<span class="number">1</span>)<span class="keyword">return</span> ans+<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!(x%<span class="number">2</span>==<span class="number">1</span>)&amp;&amp;!(y%<span class="number">2</span>==<span class="number">1</span>))<span class="keyword">return</span> ans;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二题：思维题（乘法原理）"><a href="#第二题：思维题（乘法原理）" class="headerlink" title="第二题：思维题（乘法原理）"></a>第二题：思维题（乘法原理）</h3><h3 id="5248-统计「优美子数组」"><a href="#5248-统计「优美子数组」" class="headerlink" title="5248. 统计「优美子数组」"></a>5248. 统计「优美子数组」</h3><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code>。</p>
+<p>如果某个子数组中恰好有 <code>k</code> 个奇数数字，我们就认为这个子数组是「<strong>优美子数组</strong>」。</p>
+<p>请返回这个数组中「优美子数组」的数目。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,1,2,1,1], k = 3</span><br><span class="line">输出：2</span><br><span class="line">解释：包含 3 个奇数的子数组是 [1,1,2,1] 和 [1,2,1,1] 。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,4,6], k = 1</span><br><span class="line">输出：0</span><br><span class="line">解释：数列中不包含任何奇数，所以不存在优美子数组。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,2,2,1,2,2,1,2,2,2], k = 2</span><br><span class="line">输出：16</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 50000</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 10^5</code></li>
+<li><code>1 &lt;= k &lt;= nums.length</code></li>
+</ul>
+<h3 id="算法分析-1"><a href="#算法分析-1" class="headerlink" title="算法分析"></a>算法分析</h3><p>通过分析多个样例可以得到结论，满足条件的数组个数等于<strong><code>左边离得最近的奇数的距离+1</code>*<code>右边里得最近的奇数的距离</code></strong>，前提中间的是满足条件的数组子集；在数组前后加上<code>-1</code>和<code>n</code>可以减少代码的复杂度，这种处理就是为了不用去考虑边界的情况，在循环遍历的时候</p>
+<p><strong><em>特别注意  :</em></strong>   <strong>‘&amp;’的优先级小于’==’</strong></p>
+<h4 id="C-代码-1"><a href="#C-代码-1" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numberOfSubarrays</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">        v.push_back(<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&amp;<span class="number">1</span>)&#123;</span><br><span class="line">                v.push_back(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        v.push_back(n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=k,j=<span class="number">1</span>;i&lt;v.size()<span class="number">-1</span>;i++,j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> l=v[j]-v[j<span class="number">-1</span>],r=v[i+<span class="number">1</span>]-v[i];</span><br><span class="line">            ans+=l*r;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码-1"><a href="#Java代码-1" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numberOfSubarrays</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=nums.length;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((nums[i] &amp; <span class="number">1</span>)== <span class="number">1</span>)<span class="comment">//优先级：&amp; &lt; ==</span></span><br><span class="line">                list.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        list.add(n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=k,j=<span class="number">1</span>;i&lt;list.size()-<span class="number">1</span>;i++,j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> l=list.get(j)-list.get(j-<span class="number">1</span>),r=list.get(i+<span class="number">1</span>)-list.get(i);</span><br><span class="line">            ans+=l*r;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三题：字符匹配，栈的应用"><a href="#第三题：字符匹配，栈的应用" class="headerlink" title="第三题：字符匹配，栈的应用"></a>第三题：字符匹配，栈的应用</h3><h3 id="5249-移除无效的括号"><a href="#5249-移除无效的括号" class="headerlink" title="5249. 移除无效的括号"></a>5249. 移除无效的括号</h3><p>给你一个由 <code>&#39;(&#39;</code>、<code>&#39;)&#39;</code> 和小写字母组成的字符串 <code>s</code>。</p>
+<p>你需要从字符串中删除最少数目的 <code>&#39;(&#39;</code> 或者 <code>&#39;)&#39;</code> （可以删除任意位置的括号)，使得剩下的「括号字符串」有效。</p>
+<p>请返回任意一个合法字符串。</p>
+<p>有效「括号字符串」应当符合以下 <strong>任意一条</strong> 要求：</p>
+<ul>
+<li>空字符串或只包含小写字母的字符串</li>
+<li>可以被写作 <code>AB</code>（<code>A</code> 连接 <code>B</code>）的字符串，其中 <code>A</code> 和 <code>B</code> 都是有效「括号字符串」</li>
+<li>可以被写作 <code>(A)</code> 的字符串，其中 <code>A</code> 是一个有效的「括号字符串」</li>
+</ul>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;lee(t(c)o)de)&quot;</span><br><span class="line">输出：&quot;lee(t(c)o)de&quot;</span><br><span class="line">解释：&quot;lee(t(co)de)&quot; , &quot;lee(t(c)ode)&quot; 也是一个可行答案。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;a)b(c)d&quot;</span><br><span class="line">输出：&quot;ab(c)d&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;))((&quot;</span><br><span class="line">输出：&quot;&quot;</span><br><span class="line">解释：空字符串也是有效的</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;(a(b(c)d)&quot;</span><br><span class="line">输出：&quot;a(b(c)d)&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
+<li><code>s[i]</code> 可能是 <code>&#39;(&#39;</code>、<code>&#39;)&#39;</code> 或英文小写字母</li>
+</ul>
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>需要记住每个左括号的下标，碰到右括号的时候分两种情况讨论，当栈为空的时候将下标存放到<code>set</code>中，不为空向外弹出一个元素，遍历结束后，将栈中剩余的元素添加到<code>set</code>中，最后生成结果的字符串，当<code>set</code>中包含该下标的时候跳过，否则一直往上添加即可，最后返回答案</p>
+<h4 id="C-代码-2"><a href="#C-代码-2" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">minRemoveToMakeValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; sta;</span><br><span class="line">        <span class="built_in">unordered_set</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'('</span>)&#123;</span><br><span class="line">                sta.push(i);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s[i]==<span class="string">')'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(sta.empty())st.insert(i);</span><br><span class="line">                <span class="keyword">else</span> sta.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!sta.empty())&#123;</span><br><span class="line">            st.insert(sta.top());</span><br><span class="line">            sta.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">string</span> ans=<span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(st.count(i));</span><br><span class="line">            <span class="keyword">else</span> ans+=s[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码-2"><a href="#Java代码-2" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">minRemoveToMakeValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Integer&gt; sta = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        Set&lt;Integer&gt; st = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)==<span class="string">'('</span>)&#123;</span><br><span class="line">                sta.push(i);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i)==<span class="string">')'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(sta.empty())st.add(i);</span><br><span class="line">                <span class="keyword">else</span> sta.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!sta.empty())&#123;</span><br><span class="line">            st.add(sta.pop());</span><br><span class="line">        &#125;</span><br><span class="line">        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(st.contains(i));</span><br><span class="line">            <span class="keyword">else</span> sb.append(s.charAt(i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四题：裴蜀定理"><a href="#第四题：裴蜀定理" class="headerlink" title="第四题：裴蜀定理"></a>第四题：裴蜀定理</h3><h3 id="5250-检查「好数组」"><a href="#5250-检查「好数组」" class="headerlink" title="5250. 检查「好数组」"></a>5250. 检查「好数组」</h3><p>给你一个正整数数组 <code>nums</code>，你需要从中任选一些子集，然后将子集中每一个数乘以一个 <strong>任意整数</strong>，并求出他们的和。</p>
+<p>假如该和结果为 <code>1</code>，那么原数组就是一个「<strong>好数组</strong>」，则返回 <code>True</code>；否则请返回 <code>False</code>。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [12,5,7,23]</span><br><span class="line">输出：true</span><br><span class="line">解释：挑选数字 5 和 7。</span><br><span class="line">5*3 + 7*(-2) = 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [29,6,10]</span><br><span class="line">输出：true</span><br><span class="line">解释：挑选数字 29, 6 和 10。</span><br><span class="line">29*1 + 6*(-3) + 10*(-1) = 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [3,6]</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10^5</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 10^9</code></li>
+</ul>
+<h4 id="算法分析-2"><a href="#算法分析-2" class="headerlink" title="算法分析"></a>算法分析</h4><p>裴蜀定理：[详解][<a href="https://oi-wiki.org/math/bezouts/]" target="_blank" rel="noopener">https://oi-wiki.org/math/bezouts/]</a></p>
+<p>将裴蜀定理推广到多元就可以了，简而言之就是数组中有两个数是互质的就可以了</p>
+<h4 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;y)&#123;</span><br><span class="line">            <span class="keyword">int</span> t=x;</span><br><span class="line">            x=y;</span><br><span class="line">            y=t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(y==<span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">        <span class="keyword">return</span> gcd(y,x%y);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isGoodArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t=nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;nums.size();i++)&#123;</span><br><span class="line">            t = gcd(t,nums[i]);</span><br><span class="line">            <span class="keyword">if</span>(t==<span class="number">1</span>)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(t==<span class="number">1</span>)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码-3"><a href="#Java代码-3" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;y)&#123;</span><br><span class="line">            <span class="keyword">int</span> t=x;</span><br><span class="line">            x=y;</span><br><span class="line">            y=t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(y==<span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">        <span class="keyword">return</span> gcd(y,x%y);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isGoodArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            t=gcd(t,nums[i]);</span><br><span class="line">            <span class="keyword">if</span>(t==<span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(t==<span class="number">1</span>)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/力扣周赛161场/" rel="tag"># 力扣周赛161场</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/02/FastAndSlowPointer/" rel="next" title="FastAndSlowPointer">
+                <i class="fa fa-chevron-left"></i> FastAndSlowPointer
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+  <p class="site-author-name" itemprop="name">Kawaii-jump</p>
+  <div class="site-description motion-element" itemprop="description">Java、C++</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">107</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#力扣160场周赛-链接-https-leetcode-cn-com-contest-weekly-contest-161"><span class="nav-number">1.</span> <span class="nav-text">力扣160场周赛[链接][https://leetcode-cn.com/contest/weekly-contest-161]</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#第一题：思维、规律题"><span class="nav-number"></span> <span class="nav-text">第一题：思维、规律题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5247-交换字符使得字符串相同"><span class="nav-number"></span> <span class="nav-text">5247. 交换字符使得字符串相同</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法分析"><span class="nav-number">1.</span> <span class="nav-text">算法分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">2.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">3.</span> <span class="nav-text">Java代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二题：思维题（乘法原理）"><span class="nav-number"></span> <span class="nav-text">第二题：思维题（乘法原理）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5248-统计「优美子数组」"><span class="nav-number"></span> <span class="nav-text">5248. 统计「优美子数组」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法分析-1"><span class="nav-number"></span> <span class="nav-text">算法分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码-1"><span class="nav-number">1.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码-1"><span class="nav-number">2.</span> <span class="nav-text">Java代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三题：字符匹配，栈的应用"><span class="nav-number"></span> <span class="nav-text">第三题：字符匹配，栈的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5249-移除无效的括号"><span class="nav-number"></span> <span class="nav-text">5249. 移除无效的括号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">1.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码-2"><span class="nav-number">2.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码-2"><span class="nav-number">3.</span> <span class="nav-text">Java代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四题：裴蜀定理"><span class="nav-number"></span> <span class="nav-text">第四题：裴蜀定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5250-检查「好数组」"><span class="nav-number"></span> <span class="nav-text">5250. 检查「好数组」</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法分析-2"><span class="nav-number">1.</span> <span class="nav-text">算法分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c"><span class="nav-number">2.</span> <span class="nav-text">c++</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码-3"><span class="nav-number">3.</span> <span class="nav-text">Java代码</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kawaii-jump</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
