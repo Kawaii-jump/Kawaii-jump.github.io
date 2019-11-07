@@ -93,17 +93,18 @@
   };
 </script>
 
-  <meta name="description" content="Java、C++">
+  <meta name="description" content="题目描述[原题链接][https://www.acwing.com/problem/content/description/33/]定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。">
+<meta name="keywords" content="链表反转">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LinkReverse">
 <meta property="og:url" content="http://yoursite.com/2019/11/05/LinkReverse/index.html">
 <meta property="og:site_name" content="Kawaii-jump 的博客">
-<meta property="og:description" content="Java、C++">
+<meta property="og:description" content="题目描述[原题链接][https://www.acwing.com/problem/content/description/33/]定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-05T13:45:05.035Z">
+<meta property="og:updated_time" content="2019-11-07T10:33:08.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LinkReverse">
-<meta name="twitter:description" content="Java、C++">
+<meta name="twitter:description" content="题目描述[原题链接][https://www.acwing.com/problem/content/description/33/]定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。">
 
 
 
@@ -376,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-11-05 21:45:04 / 修改时间：21:45:05" itemprop="dateCreated datePublished" datetime="2019-11-05T21:45:04+08:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 21:45:04" itemprop="dateCreated datePublished" datetime="2019-11-05T21:45:04+08:00">2019-11-05</time>
             </span>
           
 
@@ -384,8 +385,33 @@
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-07 18:33:08" itemprop="dateModified" datetime="2019-11-07T18:33:08+08:00">2019-11-07</time>
+              </span>
+            
           
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing/" itemprop="url" rel="index"><span itemprop="name">AcWing</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -420,7 +446,17 @@
       
 
       
-        
+        <h4 id="题目描述-原题链接-https-www-acwing-com-problem-content-description-33"><a href="#题目描述-原题链接-https-www-acwing-com-problem-content-description-33" class="headerlink" title="题目描述[原题链接][https://www.acwing.com/problem/content/description/33/]"></a>题目描述[原题链接][<a href="https://www.acwing.com/problem/content/description/33/]" target="_blank" rel="noopener">https://www.acwing.com/problem/content/description/33/]</a></h4><p>定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。</p>
+<a id="more"></a>
+
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入:1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line"></span><br><span class="line">输出:5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
+
+<h4 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h4><p>分析题意可知，本题的难点在于当你将节点的指针反向后，后面的节点可能会找不到了，所以再反转的过程中需要将后面的节点先保存起来，每次操作涉及到的节点有三个，所以需要维护一个三个节点的窗口，直到遍历到链表尾部，如果第三个节点的值为空，将第二个节点的<code>next</code>指向第一个节点</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">NULL</span>||head-&gt;next==<span class="literal">NULL</span>)<span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">auto</span> dummy = <span class="keyword">new</span> ListNode(<span class="number">-1</span>);</span><br><span class="line">        dummy-&gt;next = head;</span><br><span class="line">        <span class="keyword">auto</span> pre = dummy,curr = dummy-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(curr-&gt;next)&#123;</span><br><span class="line">            <span class="keyword">auto</span> temp = curr-&gt;next;</span><br><span class="line">            curr-&gt;next = pre;</span><br><span class="line">            pre = curr;</span><br><span class="line">            curr = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        curr-&gt;next = pre;</span><br><span class="line">        head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> curr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>)<span class="keyword">return</span> head;</span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">        dummy.next=head;</span><br><span class="line">        ListNode p = dummy;</span><br><span class="line">        ListNode q = dummy.next;</span><br><span class="line">        <span class="keyword">while</span>(q.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            ListNode t = q.next;</span><br><span class="line">            q.next=p;</span><br><span class="line">            p=q;</span><br><span class="line">            q=t;</span><br><span class="line">        &#125;</span><br><span class="line">        q.next=p;</span><br><span class="line">        head.next=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> q;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -444,6 +480,15 @@
     
 
     <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/链表反转/" rel="tag"># 链表反转</a>
+          
+        </div>
       
 
       
@@ -506,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -643,7 +697,9 @@
         
           
         
-        <span class="site-state-item-count">32</span>
+          
+        
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -667,6 +723,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-原题链接-https-www-acwing-com-problem-content-description-33"><span class="nav-number">1.</span> <span class="nav-text">题目描述[原题链接][https://www.acwing.com/problem/content/description/33/]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例"><span class="nav-number">2.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法描述"><span class="nav-number">3.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">4.</span> <span class="nav-text">C++代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码"><span class="nav-number">5.</span> <span class="nav-text">Java代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
